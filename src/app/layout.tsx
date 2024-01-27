@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "../libs/providers";
-import { ColorModeScript } from "@chakra-ui/react";
+import { Box, ColorModeScript, Container } from "@chakra-ui/react";
+import NavBar from "@/components/navbar";
+import Article from "@/libs/article";
 export const metadata: Metadata = {
-  title: "Blue Art",
-  description: "Created by developer Aníbal Luara.",
+  title: "Blue Art - Homepage"
 };
 
 export default function RootLayout({
@@ -17,7 +18,20 @@ export default function RootLayout({
       <body >
         <ColorModeScript initialColorMode="dark" />
         <Providers>
-          {children}
+          <Box as="main">
+            <NavBar></NavBar>
+            <Container maxW="container.md" pt={12} >
+              <div  className="flex h-80 bg-slate-800
+              items-center justify-center 
+              "  >
+                Modelo
+              </div>
+              <Article>
+                {children}
+              </Article>
+              <Box>Footer</Box>
+            </Container>
+          </Box>
         </Providers>
       </body>
     </html>

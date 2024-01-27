@@ -2,7 +2,6 @@
 import { Box, Button, useColorMode, useColorModeValue, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import OneSignal from "react-onesignal";
-import Layout from "@/components/layouts/article";
 
 const Home = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -37,8 +36,8 @@ const Home = () => {
   const color = useColorModeValue('red', 'red')
 
   return (
-    <Layout>
-      <Box as="main" p={12}  >
+    <>
+      <Box as="main" >
         <Box>
           <Text> Enviar notificaciones </Text>
         </Box>
@@ -46,8 +45,7 @@ const Home = () => {
           Cambiar color {colorMode === 'light' ? 'Dark' : 'Light'}
         </Button>
       </Box>
-    </Layout>
-
+    </>
   )
 }
 
