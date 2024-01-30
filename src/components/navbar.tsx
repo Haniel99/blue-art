@@ -16,9 +16,6 @@ const LinkItem = ({
             p={2}
             fontSize="18px"
             fontWeight="normal"
-            _hover={{
-                transform: "transparent"
-            }}
         >
             {children}
         </Link>
@@ -50,14 +47,8 @@ const NavBar = () => {
                     </Heading>
                 </Flex>
                 <Stack direction={['column', 'row']} spacing='10px'>
-                    <LinkItem href="works" >
+                    <LinkItem href="works" key={4} >
                         Creaciones
-                    </LinkItem>
-                    <LinkItem href="shareds" >
-                        Publicaciones
-                    </LinkItem>
-                    <LinkItem href="images">
-                        Imagenes
                     </LinkItem>
                 </Stack>
                 <Box display={"flex"}
@@ -65,7 +56,6 @@ const NavBar = () => {
                  >
                     <ThemeToggleButton/>
                  </Box>
-
             </Container>
         </Box>
     )

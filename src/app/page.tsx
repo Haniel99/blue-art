@@ -32,8 +32,7 @@ const Home = () => {
     initializeOneSignal();
   }, [])
 
-  return (
-    <Container maxW={'580px'}>
+  return (<Container maxW={'580px'}>
       <Box
         borderRadius="lg"
         textAlign="center"

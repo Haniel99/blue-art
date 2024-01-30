@@ -1,4 +1,3 @@
-'use client'
 import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons"

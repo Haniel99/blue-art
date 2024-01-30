@@ -6,10 +6,8 @@ import { Box, ColorModeScript, Container } from "@chakra-ui/react";
 import NavBar from "@/components/navbar";
 import Article from "@/libs/article";
 import Loading from "../components/voxel-rabbit-loader";
-const LazyVoxelRabbit = dynamic(() => import('../components/voxel-rabbit'), {
-  ssr: false,
-  loading: () => <Loading />
-})
+
+const LazyVoxel = dynamic(() => import('../components/voxel-rabbit'), { ssr: false, loading: () => <Loading></Loading> });
 export const metadata: Metadata = {
   title: "Blue Art - Homepage"
 };
@@ -20,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en"  >
-      <body>
+      <body >
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap"
@@ -28,9 +26,9 @@ export default function RootLayout({
         <ColorModeScript initialColorMode="dark" />
         <Providers>
           <Box as="main">
-            <NavBar></NavBar>
+            <NavBar />
             <Container maxW="container.md" pt={14} >
-              <LazyVoxelRabbit />
+              <LazyVoxel></LazyVoxel>
               <Article>
                 {children}
               </Article>
