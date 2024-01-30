@@ -7,7 +7,7 @@ import CarrotIcon from "./rabbit-icon";
 
 const LogoBox = styled.span`
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   display: inline-flex;
   align-items: center;
   height: 30px;
@@ -31,6 +31,7 @@ const Logo = () => {
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontFamily='M PLUS Rounded 1c", sans-serif'
+          
           fontWeight="bold"
         >
           Anibal Laura

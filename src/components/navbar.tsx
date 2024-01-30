@@ -2,21 +2,22 @@
 import { Box, Container, Flex, Stack, useColorModeValue, Link, Heading } from "@chakra-ui/react";
 
 import Logo from "./logo";
+import ThemeToggleButton from "./themeToggleButton";
 
 const LinkItem = ({
-    children,
+    children, href
 }: Readonly<{
     children: React.ReactNode;
+    href: string;
 }>) => {
     return (
         <Link
-            href="/works"
+            href={href}
             p={2}
             fontSize="18px"
             fontWeight="normal"
             _hover={{
-                fontWeight:"semibold"
-
+                transform: "transparent"
             }}
         >
             {children}
@@ -37,21 +38,33 @@ const NavBar = () => {
             <Container
                 display="flex"
                 justifyContent='space-between'
-                w="100%"
-                maxW="container.md"
-                p={4}
+                maxW="860px"
+                p={2}
             >
                 <Flex align="center" >
-                    <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+                    <Heading
+                        as="h1" size="lg" letterSpacing={'tighter'}
+                        fontWeight="bold"
+                    >
                         <Logo />
                     </Heading>
                 </Flex>
                 <Stack direction={['column', 'row']} spacing='10px'>
-                    <LinkItem>
+                    <LinkItem href="works" >
                         Creaciones
                     </LinkItem>
+                    <LinkItem href="shareds" >
+                        Publicaciones
+                    </LinkItem>
+                    <LinkItem href="images">
+                        Imagenes
+                    </LinkItem>
                 </Stack>
-                <Box>Modo de color</Box>
+                <Box display={"flex"}
+                 alignItems="center"
+                 >
+                    <ThemeToggleButton/>
+                 </Box>
 
             </Container>
         </Box>

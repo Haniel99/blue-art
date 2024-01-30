@@ -16,11 +16,12 @@ const components = {
   }
 }
 const fonts = {
-  heading: "'M PLUS Rounded 1c'",
-};
+  heading: "'M PLUS Rounded 1c'"
+}
+
 const config = {
   initialColorMode: "dark",
   useSystemColorMode: false,
 };
 
-export const theme = extendTheme({ config, fonts, components });
+export const theme = extendTheme({ config, components,fonts });
