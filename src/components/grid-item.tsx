@@ -23,11 +23,12 @@ export const WorkGridItem = ({
         <Box
             w={"100%"}
             textAlign={"center"}
-            shadow={"lg"}
             mt={2}
             bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
             css={{ backdropFilter: 'blur(10px)' }}
+            
             rounded={"lg"}
+
         >
             <LinkBox
                 as={Link}

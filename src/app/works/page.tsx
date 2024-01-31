@@ -4,14 +4,14 @@ import { Metadata } from "next";
 import Section from "@/components/section";
 import { WorkGridItem } from "@/components/grid-item";
 import thumbnailg_practica from "../../../public/g_practicas1.png";
-import thumbnailteapro from "../../../public/teapro1.jpeg";
+import thumbnailteapro from "../../../public/g_practicas2.png";
 const Page = () => {
     return (
         <Container>
             <Heading as={"h3"} fontSize={20} >
                 Trabajos
             </Heading>
-            <SimpleGrid columns={1} gap={6} >
+            <SimpleGrid columns={1}>
                 <Section
                 >
                     <WorkGridItem
