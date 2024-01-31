@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
-
-export const Spinner = () => {
-    return (<>Loading</>)
+import { Spinner } from '@chakra-ui/react'
+export const VolxelSpinner = () => {
+    return (<Spinner key={2} size="md" />)
 }
 export const VoxelRabbitContainer = 
     ({ children }: Readonly<{
@@ -24,7 +24,7 @@ export const VoxelRabbitContainer =
 
 export const VoxelLoader = () => {
     return <VoxelRabbitContainer >
-        <Spinner></Spinner>
+        <VolxelSpinner/>
     </VoxelRabbitContainer>
 }
 

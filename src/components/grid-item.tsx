@@ -1,5 +1,5 @@
 "use client"
-import { Box, LinkBox, LinkOverlay, Text } from "@chakra-ui/react";
+import { Box, LinkBox, LinkOverlay, Text, useColorModeValue } from "@chakra-ui/react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +20,15 @@ export const WorkGridItem = ({
     thumbnail: string | StaticImport
 }>) => {
     return (
-        <Box w={"100%"} textAlign={"center"} mt={3}  >
+        <Box
+            w={"100%"}
+            textAlign={"center"}
+            shadow={"lg"}
+            mt={2}
+            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+            css={{ backdropFilter: 'blur(10px)' }}
+            rounded={"lg"}
+        >
             <LinkBox
                 as={Link}
                 href={`/${category}/${id}`}
@@ -30,20 +38,23 @@ export const WorkGridItem = ({
                 <Image
                     src={thumbnail}
                     alt={title}
-                    className="rounded-lg"
+                    className="rounded-t-lg"
                     placeholder="blur"
                 />
-                <LinkOverlay as={"div"}
-                    href={`/${category}/${id}`}
-
+                <Box
                 >
-                    <Text fontSize={20} >
-                        {title}
+                    <LinkOverlay as={"div"}
+                        href={`/${category}/${id}`}
+                        pt={2}
+                    >
+                        <Text fontSize={20}  >
+                            {title}
+                        </Text>
+                    </LinkOverlay>
+                    <Text fontSize={14} px={2} pt={1} pb={3}   >
+                        {children}
                     </Text>
-                </LinkOverlay>
-                <Text fontSize={14} >
-                    {children}
-                </Text>
+                </Box>
             </LinkBox>
         </Box>
     )

@@ -1,32 +1,34 @@
 "use client"
-import { Container, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Box, Container, Heading, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
 import { Metadata } from "next";
 import Section from "@/components/section";
 import { WorkGridItem } from "@/components/grid-item";
-import image from "../../../public/test-image.png";
-
+import thumbnailg_practica from "../../../public/g_practicas1.png";
+import thumbnailteapro from "../../../public/teapro1.jpeg";
 const Page = () => {
     return (
         <Container>
             <Heading as={"h3"} fontSize={20} >
                 Trabajos
             </Heading>
-            <SimpleGrid column={[1, 1, 2]} gap={6} >
-                <Section>
+            <SimpleGrid columns={1} gap={6} >
+                <Section
+                >
                     <WorkGridItem
                         category="works"
-                        title="TEAPro"
-                        thumbnail={image}
-                        id={"teapro"}
+                        title="Sistema gestion de practicas docentes"
+                        thumbnail={thumbnailg_practica}
+                        id={"g-practices"}
                     >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nesciunt nam, neque inventore vel sequi reiciendis, sapiente sunt eum perspiciatis quam, dignissimos asperiores fugit alias quas atque quibusdam et. Quae!
+                        Este sistema ha sido desarrollado específicamente para la
+                        Universidad de Tarapara, enfocándose en el área de docencia.
                     </WorkGridItem>
                 </Section>
                 <Section>
                     <WorkGridItem
                         category="works"
                         title="teapro"
-                        thumbnail={image}
+                        thumbnail={thumbnailteapro}
                         id={"teapro"}
                     >
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quas, hic deserunt, fugiat odit optio eius itaque velit neque ducimus quis reprehenderit pariatur facere iusto nulla facilis molestias incidunt? Adipisci.
