@@ -1,6 +1,7 @@
 "use client"
 import { Box, Container, Flex, Stack, useColorModeValue, Link, Heading } from "@chakra-ui/react";
-
+import NextLink from "next/link"
+import { usePathname } from "next/navigation";
 import Logo from "./logo";
 import ThemeToggleButton from "./themeToggleButton";
 
@@ -10,15 +11,23 @@ const LinkItem = ({
     children: React.ReactNode;
     href: string;
 }>) => {
+    const pathname = usePathname()
+    const color = useColorModeValue("black", "white")
     return (
         <Link
+            as={NextLink}
             href={href}
             p={2}
-            fontSize="18px"
+            borderBottom={pathname == href ? '2px' : ''}
+            borderColor={color}
             fontWeight="normal"
+            _hover={{
+                borderBottom: '2px'
+            }
+            }
         >
             {children}
-        </Link>
+        </Link >
     )
 }
 
@@ -47,15 +56,18 @@ const NavBar = () => {
                     </Heading>
                 </Flex>
                 <Stack direction={['column', 'row']} spacing='10px'>
-                    <LinkItem href="works" key={4} >
-                        Creaciones
+                    <LinkItem href="/works" key="works" >
+                        Proyectos
+                    </LinkItem>
+                    <LinkItem href="/activities" key="activities" >
+                        publicaciones
                     </LinkItem>
                 </Stack>
                 <Box display={"flex"}
-                 alignItems="center"
-                 >
-                    <ThemeToggleButton/>
-                 </Box>
+                    alignItems="center"
+                >
+                    <ThemeToggleButton />
+                </Box>
             </Container>
         </Box>
     )

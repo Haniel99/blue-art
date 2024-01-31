@@ -6,10 +6,10 @@ const components = {
       'section-title': {
         textDecoration: 'underline',
         fontSize: 20,
-        textUnderlineOffset: 6,
+        textUnderlineOffset: 7,
         textDecorationColor: '#525252',
         textDecorationThickness: 4,
-        marginTop: 3,
+        marginTop: 4,
         marginBottom: 4
       }
     }
@@ -24,4 +24,15 @@ const config = {
   useSystemColorMode: false,
 };
 
-export const theme = extendTheme({ config, components,fonts });
+
+
+const  styles = {
+    global: {
+      'html, body': {
+        fontSize: "18px",
+      }
+    }
+  }
+
+
+export const theme = extendTheme({ config, components,fonts, styles });
