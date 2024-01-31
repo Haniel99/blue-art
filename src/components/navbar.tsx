@@ -57,7 +57,7 @@ const NavBar = () => {
                     </Heading>
                 </Flex>
                 <Stack
-                    display={{ base: 'none', md: 'flex' }}
+                    display={"flex"}
                     width={{ base: 'full', md: 'auto' }}
                     direction={['column', 'row']}
                     spacing='10px'
