@@ -6,6 +6,7 @@ import { Box, ColorModeScript, Container } from "@chakra-ui/react";
 import NavBar from "@/components/navbar";
 import Article from "@/libs/article";
 import Loading from "../components/voxel-rabbit-loader";
+import Footer from "@/components/footer";
 
 const LazyVoxel = dynamic(() => import('../components/voxel-rabbit'), { ssr: false, loading: () => <Loading></Loading> });
 export const metadata: Metadata = {
@@ -25,14 +26,14 @@ export default function RootLayout({
         />
         <ColorModeScript initialColorMode="dark" />
         <Providers>
-          <Box as="main">
+          <Box as="main" mb={6} >
             <NavBar />
             <Container maxW="container.md" pt={14} >
-              <LazyVoxel></LazyVoxel>
+              <LazyVoxel />
               <Article>
                 {children}
               </Article>
-              <Box>Footer</Box>
+              <Footer />
             </Container>
           </Box>
         </Providers>

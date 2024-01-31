@@ -18,13 +18,12 @@ const LinkItem = ({
             as={NextLink}
             href={href}
             p={2}
-            borderBottom={pathname == href ? '2px' : ''}
-            borderColor={color}
             fontWeight="normal"
+            textDecoration={pathname==href?"underline":"none"}
+            textUnderlineOffset={10}
             _hover={{
-                borderBottom: '2px'
-            }
-            }
+                textDecoration: "underline",
+            }}
         >
             {children}
         </Link >
