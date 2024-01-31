@@ -3,10 +3,11 @@ import { Box, Container, Flex, Stack, useColorModeValue, Link, Heading } from "@
 import NextLink from "next/link"
 import { usePathname } from "next/navigation";
 import Logo from "./logo";
-import ThemeToggleButton from "./themeToggleButton";
+import ThemeToggleButton from "./theme-toggle-button";
+import { IoLogoGithub } from "react-icons/io5";
 
 const LinkItem = ({
-    children, href
+    children, href, ...props
 }: Readonly<{
     children: React.ReactNode;
     href: string;
@@ -19,11 +20,12 @@ const LinkItem = ({
             href={href}
             p={2}
             fontWeight="normal"
-            textDecoration={pathname==href?"underline":"none"}
+            textDecoration={pathname == href ? "underline" : "none"}
             textUnderlineOffset={10}
             _hover={{
                 textDecoration: "underline",
             }}
+            {...props}
         >
             {children}
         </Link >
@@ -54,12 +56,29 @@ const NavBar = () => {
                         <Logo />
                     </Heading>
                 </Flex>
-                <Stack direction={['column', 'row']} spacing='10px'>
+                <Stack
+                    display={{ base: 'none', md: 'flex' }}
+                    width={{ base: 'full', md: 'auto' }}
+                    direction={['column', 'row']}
+                    spacing='10px'
+                >
                     <LinkItem href="/works" key="works" >
                         Proyectos
                     </LinkItem>
                     <LinkItem href="/activities" key="activities" >
                         publicaciones
+                    </LinkItem>
+                    <LinkItem
+                        href="https://github.com/Haniel99" key={"sourse"}
+                    >
+                        <Box
+                            display={"flex"}
+                            gap={1}
+                            alignItems={"center"}
+                        >
+                            <IoLogoGithub />
+                            Repositorio
+                        </Box>
                     </LinkItem>
                 </Stack>
                 <Box display={"flex"}

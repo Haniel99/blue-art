@@ -108,7 +108,7 @@ const Home = () => {
         </BioSection>
         <BioSection>
           <BioYear>2010</BioYear>
-          Se mudo a la ciudad de Arica, Chile. Fue un cambio muy importante para el.
+          Se mudo a la ciudad de Arica, Chile.
         </BioSection>
         <BioSection>
           <BioYear>2024</BioYear>
@@ -117,7 +117,12 @@ const Home = () => {
         </BioSection>
         <BioSection>
           <BioYear>2024</BioYear>
-          Comenzo a trabajar en un proyecto en la empresa tecnologica de{' '}
+          Comenzo a trabajar en un proyecto{' '}<Link
+            href="https://teapro.cl/"
+            textUnderlineOffset={3}
+            target="_blank"
+            color={useColorModeValue('#3d7aed', '#ff63c3')}
+          >TEAPro</Link>{' '}en la empresa tecnologica de{' '}
           <Link
             href="https://kuvemar.cl/"
             textUnderlineOffset={3}
