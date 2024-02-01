@@ -23,6 +23,7 @@ const Article = ({
                     window.scrollTo({ top: 0 })
                 }
             }}
+            
         >
             <motion.article
                 initial="hidden"

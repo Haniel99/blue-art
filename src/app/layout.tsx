@@ -28,8 +28,8 @@ export default function RootLayout({
         <Providers>
           <Box as="main" mb={6} >
             <NavBar />
-            <Container maxW="container.md" pt={14} >
-              <LazyVoxel />
+            <Container maxW="container.md" pt="100px" >
+              <LazyVoxel/>
               <Article>
                 {children}
               </Article>
