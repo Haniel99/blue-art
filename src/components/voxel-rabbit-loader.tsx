@@ -5,7 +5,7 @@ export const VolxelSpinner = () => {
     return (<Spinner key={2} size="md" />)
 }
 export const VoxelRabbitContainer =
-    forwardRef(({ children}: Readonly<{
+    forwardRef(({ children }: Readonly<{
         children: React.ReactNode
     }>, ref?: LegacyRef<HTMLDivElement> | undefined) => {
         return (<Box
@@ -23,6 +23,8 @@ export const VoxelRabbitContainer =
             {children}
         </Box>)
     });
+
+VoxelRabbitContainer.displayName = "VoxelRabbitContainer";
 
 export const VoxelLoader = () => {
     return <VoxelRabbitContainer
