@@ -3,7 +3,7 @@ import { VolxelSpinner, VoxelRabbitContainer } from "./voxel-rabbit-loader";
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import * as THREE from "three"
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from "../libs/model";
 
 function easeOutCirc(x) {

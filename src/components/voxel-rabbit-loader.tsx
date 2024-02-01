@@ -1,13 +1,13 @@
 import { Box } from "@chakra-ui/react";
 import { Spinner } from '@chakra-ui/react'
-import { forwardRef } from "react";
+import { LegacyRef, MutableRefObject, forwardRef } from "react";
 export const VolxelSpinner = () => {
     return (<Spinner key={2} size="md" />)
 }
 export const VoxelRabbitContainer =
     forwardRef(({ children}: Readonly<{
         children: React.ReactNode
-    }>, ref: any) => {
+    }>, ref?: LegacyRef<HTMLDivElement> | undefined) => {
         return (<Box
             ref={ref}
             m="auto"
@@ -25,7 +25,8 @@ export const VoxelRabbitContainer =
     });
 
 export const VoxelLoader = () => {
-    return <VoxelRabbitContainer >
+    return <VoxelRabbitContainer
+    >
         <VolxelSpinner />
     </VoxelRabbitContainer>
 }
