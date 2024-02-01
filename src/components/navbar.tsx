@@ -1,10 +1,11 @@
 "use client"
-import { Box, Container, Flex, Stack, useColorModeValue, Link, Heading } from "@chakra-ui/react";
+import { Box, Container, Flex, Stack, useColorModeValue, Link, Heading, Menu, MenuButton, IconButton, MenuList } from "@chakra-ui/react";
 import NextLink from "next/link"
 import { usePathname } from "next/navigation";
 import Logo from "./logo";
 import ThemeToggleButton from "./theme-toggle-button";
 import { IoLogoGithub } from "react-icons/io5";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 const LinkItem = ({
     children, href, ...props
@@ -57,7 +58,7 @@ const NavBar = () => {
                     </Heading>
                 </Flex>
                 <Stack
-                    display={"flex"}
+                    display={{ base: "none", md: "flex" }}
                     width={{ base: 'full', md: 'auto' }}
                     direction={['column', 'row']}
                     spacing='10px'
@@ -83,9 +84,30 @@ const NavBar = () => {
                 </Stack>
                 <Box display={"flex"}
                     alignItems="center"
+                    gap={2}
                 >
                     <ThemeToggleButton />
+                    <Box
+                        display={{ base: "flex", md: "none" }}
+                    >
+                        <Menu
+                        >
+                            <MenuButton
+                                as={IconButton}
+                                aria-label="Options"
+                                icon={<HamburgerIcon />}
+                                variant={"outline"}
+                            />
+                            <MenuList>
+                                <Link
+                                    px={2}
+                                    href="/works"
+                                >Trabajos</Link>
+                            </MenuList>
+                        </Menu>
+                    </Box>
                 </Box>
+
             </Container>
         </Box>
     )
