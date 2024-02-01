@@ -1,13 +1,15 @@
 import { Box } from "@chakra-ui/react";
 import { Spinner } from '@chakra-ui/react'
+import { forwardRef } from "react";
 export const VolxelSpinner = () => {
     return (<Spinner key={2} size="md" />)
 }
-export const VoxelRabbitContainer = 
-    ({ children }: Readonly<{
-        children: React.ReactNode;
-    }>) => {
+export const VoxelRabbitContainer =
+    forwardRef(({ children}: Readonly<{
+        children: React.ReactNode
+    }>, ref: any) => {
         return (<Box
+            ref={ref}
             m="auto"
             mt={['-20px', '-60px', '-120px']}
             mb={['-40px', '-140px', '-200px']}
@@ -20,11 +22,11 @@ export const VoxelRabbitContainer =
         >
             {children}
         </Box>)
-    };
+    });
 
 export const VoxelLoader = () => {
     return <VoxelRabbitContainer >
-        <VolxelSpinner/>
+        <VolxelSpinner />
     </VoxelRabbitContainer>
 }
 
