@@ -1,5 +1,6 @@
+"use client"
 import { extendTheme } from "@chakra-ui/react";
-
+import { mode } from "@chakra-ui/theme-tools";
 const components = {
   Heading: {
     variants: {
@@ -26,13 +27,13 @@ const config = {
 
 
 
-const  styles = {
-    global: {
-      'html, body': {
-        fontSize: "18px",
-      }
-    }
-  }
 
+const styles = {
+  global: (props: any) => ({
+    body: {
+      bg: mode('#f0e7db', '#202023')(props),
+    }
+  })
+}
 
 export const theme = extendTheme({ config, components,fonts, styles });

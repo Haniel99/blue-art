@@ -66,7 +66,7 @@ const NavBar = () => {
                     <LinkItem href="/works" key="works" >
                         Proyectos
                     </LinkItem>
-                    <LinkItem href="/activities" key="activities" >
+                    <LinkItem href="/posts" key="posts" >
                         publicaciones
                     </LinkItem>
                     <LinkItem
