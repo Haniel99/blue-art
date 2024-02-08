@@ -26,7 +26,7 @@ export default function RootLayout({
         />
         <ColorModeScript initialColorMode="dark" />
         <Providers>
-          <Box as="main" mb={6} >
+          <Box as="main" mb={6}>
             <NavBar />
             <Container maxW="container.md" pt="100px" >
               <LazyVoxel/>

@@ -15,7 +15,7 @@ const VoxelRabbit = () => {
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
 
-  const urlDogGLB = "/rabbit.glb"
+  const urlDogGLB = "/rabbit1.glb"
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer

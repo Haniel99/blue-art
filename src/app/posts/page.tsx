@@ -7,11 +7,7 @@ import {
 const PostPage = () => {
 
     return (
-        <Container>
-            <ContainerBlueArtTable
-            >
-               <BlueArtTable/>
-            </ContainerBlueArtTable>
+        <Container >
         </Container>
     )
 }

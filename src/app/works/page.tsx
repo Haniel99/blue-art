@@ -12,14 +12,14 @@ const Page = () => {
             <Heading as={"h3"} fontSize={20} >
                 Trabajos
             </Heading>
-            <SimpleGrid columns={[1]}  >
+            <SimpleGrid columns={[1,1,2]} gap={4}  >
                 <Section
                 >
                     <WorkGridItem
                         category="works"
                         title="Sistema gestion de practicas docentes"
                         thumbnail={thumbnailg_practica}
-                        id={"g-practices"}
+                        id={"uta"}
                     >
                         Este sistema ha sido desarrollado específicamente para la
                         Universidad de Tarapara, enfocándose en el área de docencia.
@@ -32,7 +32,8 @@ const Page = () => {
                         thumbnail={thumbnailteapro}
                         id={"teapro"}
                     >
-                        TEAPro es una aplicación dedicada a la entrega de opciones accesibles de orientación y terapia profesional para mejorar la calidad de vida de las personas con autismo y sus familias.
+                        TEAPro es una aplicación dedicada a la entrega de opciones accesibles 
+                        de orientación y terapia profesional.
                     </WorkGridItem>
                 </Section>
             </SimpleGrid>

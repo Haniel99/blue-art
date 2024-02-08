@@ -48,7 +48,7 @@ const Home = () => {
   }, [])
 
   return (
-    <Container maxW={'580px'}>
+    <Container>
       <Box
         borderRadius="lg"
         textAlign="center"
@@ -104,7 +104,7 @@ const Home = () => {
         </Heading>
         <BioSection>
           <BioYear>1999</BioYear>
-          Nacio en un pequeño pueblo llamado Puno, Peru.
+          Nacio el 30 de noviembre del 99.
         </BioSection>
         <BioSection>
           <BioYear>2010</BioYear>
@@ -124,7 +124,7 @@ const Home = () => {
             color={useColorModeValue('#3d7aed', '#ff63c3')}
           >TEAPro</Link>{' '}en la empresa tecnologica de{' '}
           <Link
-            href="https://kuvemar.cl/"
+            href="https://kuvemar.com/"
             textUnderlineOffset={3}
             target="_blank"
             color={useColorModeValue('#3d7aed', '#ff63c3')}

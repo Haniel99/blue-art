@@ -24,10 +24,6 @@ export const WorkGridItem = ({
             w={"100%"}
             textAlign={"center"}
             mt={2}
-            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-            css={{ backdropFilter: 'blur(10px)' }}
-            
-            rounded={"lg"}
 
         >
             <LinkBox
@@ -39,7 +35,7 @@ export const WorkGridItem = ({
                 <Image
                     src={thumbnail}
                     alt={title}
-                    className="rounded-t-lg"
+                    className="rounded-lg"
                     placeholder="blur"
                 />
                 <Box
